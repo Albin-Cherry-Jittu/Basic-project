@@ -1,11 +1,3 @@
-function factorialize(num) {
-    var result = num;
-    if (num === 0 || num === 1) 
-      return 1; 
-    while (num > 1) { 
-      num--;
-      result *= num;
-    }
-    return result;
-  }
-  factorialize(5);
+a = 20
+b = 30
+console.log(a + (b * b * b));
