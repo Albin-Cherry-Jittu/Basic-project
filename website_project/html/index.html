@@ -48,8 +48,16 @@
             itaque autem ipsum voluptas blanditiis veniam, possimus inventore porro reprehenderit? Exercitationem similique repellat consequatur in temporibus hic, amet, dolores qui nostrum accusamus voluptatibus, iste eum quis consequuntur est ratione
             illo. Ullam natus, nemo earum tempora explicabo dolores consectetur dicta rerum cum necessitatibus!
         </p>
+        <button onclick="add()">Submit</button>
+        <h5>9591 61 91 91 </h5>
     </div>
     <script>
+        function add() {
+            console.log("Hellooo");
+        }
+
+
+
         let stars = document.getElementById('stars');
         let moon = document.getElementById('moon');
         let mountains_behind = document.getElementById('mountains_behind');
@@ -59,6 +67,7 @@
         let header = document.querySelector('header');
 
         window.addEventListener('scroll', function() {
+            console.log("Hi");
             let value = window.scrollY;
             stars.style.left = value * 0.25 + 'px';
             moon.style.top = value * 1.05 + 'px';
