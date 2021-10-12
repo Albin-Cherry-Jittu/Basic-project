@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 class Counter extends React.Component {
   state = {
-    count: 0,
-    tags: ["tag1", "tag2", "tag3"],
+    value: this.props.value,
+   
   };
 
   style = {
@@ -18,15 +18,16 @@ class Counter extends React.Component {
   // }
   handelIncrement = (product) => {
     console.log(product);
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ value: this.state.value + 1 });
   };
 
   doHandleIncrement = () => {
     this.handelIncrement({ id: 1 });
   };
   render() {
+    console.log(this.props)
     let classes = "badge m-2 badge-";
-    classes += this.state.count === 0 ? "warning" : "primary";
+    classes += this.state.value === 0 ? "warning" : "primary";
     return (
       <div>
         <span style={this.style} className={classes}>
@@ -38,18 +39,15 @@ class Counter extends React.Component {
         >
           Increment
         </button>
-        <ul>
-          {this.state.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
+        <button onClick={this.props.onDelete} className="btn btn-danger btn-sm m-2">Delete</button>
+       
       </div>
     );
   }
 
   formatcount() {
-    const { count } = this.state;
-    return count === 0 ? "zero" : count;
+    const { value} = this.state;
+    return value === 0 ? "zero" : value;
   }
 }
 
