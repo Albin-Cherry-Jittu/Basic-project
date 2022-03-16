@@ -13,7 +13,7 @@ class Counter extends React.Component {
 
   // constructor(){
   //   super();
-  //   this.handelIncrement = this.handelIncrement.bind(this);
+  //   this.handelIncrement = this.handelIncrement.bind(this); 
 
   // }
   handelIncrement = (product) => {
@@ -39,7 +39,7 @@ class Counter extends React.Component {
         >
           Increment
         </button>
-        <button onClick={this.props.onDelete} className="btn btn-danger btn-sm m-2">Delete</button>
+        <button onClick={()=>this.props.onDelete(this.props.id)} className="btn btn-danger btn-sm m-2">Delete</button>
        
       </div>
     );
